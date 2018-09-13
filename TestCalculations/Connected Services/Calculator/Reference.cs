@@ -8,45 +8,69 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SimpleCalculator.CalculatorReference {
+namespace TestCalculations.Calculator {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CalculatorReference.CalculatorSoap")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Calculator.CalculatorSoap")]
     public interface CalculatorSoap {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Add", ReplyAction="*")]
         double Add(double f1, double f2);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Add", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> AddAsync(double f1, double f2);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Subtrct", ReplyAction="*")]
         double Subtrct(double f1, double f2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Subtrct", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> SubtrctAsync(double f1, double f2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Multiply", ReplyAction="*")]
         double Multiply(double f1, double f2);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Multiply", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> MultiplyAsync(double f1, double f2);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Divide", ReplyAction="*")]
         double Divide(double f1, double f2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Divide", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> DivideAsync(double f1, double f2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SqrRoot", ReplyAction="*")]
         double SqrRoot(double f1);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SqrRoot", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> SqrRootAsync(double f1);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ByTwo", ReplyAction="*")]
         double ByTwo(double f1);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ByTwo", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> ByTwoAsync(double f1);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ByFour", ReplyAction="*")]
         double ByFour(double f1);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ByFour", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> ByFourAsync(double f1);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Neg", ReplyAction="*")]
         double Neg(double f1);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Neg", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> NegAsync(double f1);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface CalculatorSoapChannel : SimpleCalculator.CalculatorReference.CalculatorSoap, System.ServiceModel.IClientChannel {
+    public interface CalculatorSoapChannel : TestCalculations.Calculator.CalculatorSoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CalculatorSoapClient : System.ServiceModel.ClientBase<SimpleCalculator.CalculatorReference.CalculatorSoap>, SimpleCalculator.CalculatorReference.CalculatorSoap {
+    public partial class CalculatorSoapClient : System.ServiceModel.ClientBase<TestCalculations.Calculator.CalculatorSoap>, TestCalculations.Calculator.CalculatorSoap {
         
         public CalculatorSoapClient() {
         }
@@ -71,32 +95,64 @@ namespace SimpleCalculator.CalculatorReference {
             return base.Channel.Add(f1, f2);
         }
         
+        public System.Threading.Tasks.Task<double> AddAsync(double f1, double f2) {
+            return base.Channel.AddAsync(f1, f2);
+        }
+        
         public double Subtrct(double f1, double f2) {
             return base.Channel.Subtrct(f1, f2);
+        }
+        
+        public System.Threading.Tasks.Task<double> SubtrctAsync(double f1, double f2) {
+            return base.Channel.SubtrctAsync(f1, f2);
         }
         
         public double Multiply(double f1, double f2) {
             return base.Channel.Multiply(f1, f2);
         }
         
+        public System.Threading.Tasks.Task<double> MultiplyAsync(double f1, double f2) {
+            return base.Channel.MultiplyAsync(f1, f2);
+        }
+        
         public double Divide(double f1, double f2) {
             return base.Channel.Divide(f1, f2);
+        }
+        
+        public System.Threading.Tasks.Task<double> DivideAsync(double f1, double f2) {
+            return base.Channel.DivideAsync(f1, f2);
         }
         
         public double SqrRoot(double f1) {
             return base.Channel.SqrRoot(f1);
         }
         
+        public System.Threading.Tasks.Task<double> SqrRootAsync(double f1) {
+            return base.Channel.SqrRootAsync(f1);
+        }
+        
         public double ByTwo(double f1) {
             return base.Channel.ByTwo(f1);
+        }
+        
+        public System.Threading.Tasks.Task<double> ByTwoAsync(double f1) {
+            return base.Channel.ByTwoAsync(f1);
         }
         
         public double ByFour(double f1) {
             return base.Channel.ByFour(f1);
         }
         
+        public System.Threading.Tasks.Task<double> ByFourAsync(double f1) {
+            return base.Channel.ByFourAsync(f1);
+        }
+        
         public double Neg(double f1) {
             return base.Channel.Neg(f1);
+        }
+        
+        public System.Threading.Tasks.Task<double> NegAsync(double f1) {
+            return base.Channel.NegAsync(f1);
         }
     }
 }

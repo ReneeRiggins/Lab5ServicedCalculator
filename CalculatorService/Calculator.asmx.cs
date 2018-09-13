@@ -38,6 +38,21 @@ namespace CalculatorService
             return f1 / f2;
         }
         [WebMethod]
+        public double SqrRoot(double f1)
+        {
+            return Math.Sqrt(f1);
+        }
+        [WebMethod]
+        public double ByTwo(double f1)
+        {
+            return f1 / 2;
+        }
+        [WebMethod]
+        public double ByFour(double f1)
+        {
+            return f1 / 4;
+        }
+        [WebMethod]
         public double Neg(double f1)
         {
             return f1 * -1;

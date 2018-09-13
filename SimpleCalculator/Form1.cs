@@ -204,7 +204,7 @@ namespace SimpleCalculator
             double opr1;
             if (double.TryParse(txtInput.Text, out opr1))
             {
-                txtInput.Text = (Math.Sqrt(opr1)).ToString();
+                result = calcRef.SqrRoot(opr1).ToString();
             }
         }
 
@@ -213,7 +213,7 @@ namespace SimpleCalculator
             double opr1;
             if (double.TryParse(txtInput.Text, out opr1))
             {
-                txtInput.Text = (opr1 / 2).ToString();
+                result = calcRef.ByTwo(opr1).ToString();
             }
         }
 
@@ -222,7 +222,7 @@ namespace SimpleCalculator
             double opr1;
             if (double.TryParse(txtInput.Text, out opr1))
             {
-                txtInput.Text = (opr1 / 4).ToString();
+                result = calcRef.ByFour(opr1).ToString();
             }
         }
 
